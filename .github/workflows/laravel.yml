@@ -38,6 +38,12 @@ jobs:
           id: test
           run: vendor/bin/phpunit
 
+        - name: Artifacts
+          uses: actions/upload-artifact@v3
+          with:
+            name: test-results
+            path: composer.json
+
         - name: deploy
           if: steps.test.outcome == 'success'
           run: ls
