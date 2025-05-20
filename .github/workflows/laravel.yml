@@ -41,7 +41,7 @@ jobs:
         - name: Artifacts
           uses: actions/upload-artifact@v3
           with:
-            name: test-results
+            name: artifacts
             path: composer.json
 
         - name: deploy
